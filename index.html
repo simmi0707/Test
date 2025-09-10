@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuwara Replica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <script>
+  const slider = document.getElementById("logoSlider");
+
+  function scrollLeft() {
+    slider.scrollBy({ left: -200, behavior: "smooth" });
+  }
+
+  function scrollRight() {
+    slider.scrollBy({ left: 200, behavior: "smooth" });
+  }
+
+  // Swipe support
+  let startX = 0;
+  slider.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener("touchmove", (e) => {
+    const moveX = e.touches[0].clientX;
+    const diff = startX - moveX;
+    slider.scrollLeft += diff;
+    startX = moveX;
+  });
+</script>
+
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="assets/Zwara Logo.png" alt="Zuwara logo" class="logo">
+      </div>
+      <nav class="nav">
+        <a href="#"><span class="icon">♦</span> Influencer</a>
+        <a href="#"><span class="icon">♡</span> Favourite</a>
+        <a href="#"><span class="icon">🛒</span> Cart</a>
+        <a href="#"><span class="icon">🌐</span> العربية</a>
+        <button class="btn-outline"><span class="icon">👤</span> Sign up/ Log in</button>
+      </nav>
+      <button class="hamburger">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-art left">
+      <img src="assets/img2-removebg-preview.png" alt="food left">
+    </div>
+
+    <div class="hero-core">
+      <h1>Order delicious food from your<br><span>favorite restaurants.</span></h1>
+      <div class="hero-search">
+        <div class="input-pill">
+          <span class="icon">📍</span>
+          <input type="text" placeholder="Kuwait City, Kuwait">
+        </div>
+        <div class="input-pill">
+          <span class="icon">🔍</span>
+          <input type="text" placeholder="Search restaurant">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art right">
+      <img src="assets/img1-removebg-preview.png" alt="food right">
+    </div>
+  </section>
+
+ 
+   <!-- Restaurant Logos -->
+  <section class="restaurant-section">
+  <h3><span>Welcome!</span> Let’s <strong>Sugar Up!</strong></h3>
+  <div class="slider-container">
+    <button class="slide-btn left" onclick="scrollLeft()">&#10094;</button>
+    <div class="restaurant-logos" id="logoSlider">
+      <div class="logo"><img src="assets/img28.png" alt="Mayan"><p>MAYAN</p></div>
+      <div class="logo"><img src="assets/img29.png" alt="Tamra"><p>Tamra</p></div>
+      <div class="logo"><img src="assets/blere.png" alt="Blere"><p>Blere</p></div>
+      <div class="logo"><img src="assets/img30.png" alt="DGMAA"><p>DGMAA</p></div>
+      <div class="logo"><img src="assets/img31.png" alt="OYO"><p>OYO</p></div>
+      <div class="logo"><img src="assets/img32.png" alt="Hive"><p>Hive</p></div>
+      <div class="logo"><img src="assets/img33.png" alt="BI"><p>BI</p></div>
+      <div class="logo"><img src="assets/img34.png" alt="Ookie"><p>Ookie</p></div>
+      <div class="logo"><img src="assets/img35.png" alt="Blackeye"><p>Blackeye</p></div>
+      <div class="logo"><img src="assets/img36.png" alt="Mango"><p>Mango</p></div>
+      <div class="logo"><img src="assets/img-46.png" alt="Ward N"><p>Ward N...</p></div><div class="logo"><img src="assets/img35.png" alt="Blackeye"><p>Blackeye</p></div>
+      <div class="logo"><img src="assets/img36.png" alt="Mango"><p>Mango</p></div>
+      <div class="logo"><img src="assets/img-46.png" alt="Ward N"><p>Ward N...</p></div>
+      <div class="logo"><img src="assets/img32.png" alt="Hive"><p>Hive</p></div>
+    </div>
+    <button class="slide-btn right" onclick="scrollRight()">&#10095;</button>
+  </div>
+</section>
+
+  <!-- FILTER TABS -->
+  <section class="feature-section">
+    <div class="feature-list">
+      <div class="feature-card">
+        OFFERS <img src="assets/img21-removebg-preview.png" alt="Offers">
+      </div>
+      <div class="feature-card">
+        NEWLY ADDED <img src="assets/img22-removebg-preview.png" alt="Newly Added">
+      </div>
+      <div class="feature-card">
+        DELIVERY <img src="assets/img24.png" alt="Delivery">
+      </div>
+      <div class="feature-card">
+        TRENDS <img src="assets/img25.png" alt="Trends">
+      </div>
+      <div class="feature-card">
+        GIFTS <img src="assets/img26.png" alt="Gifts">
+      </div>
+      <div class="feature-card">
+        CATERING <img src="assets/img27.png" alt="Catering">
+      </div>
+      <div class="feature-card">
+        CATERING <img src="assets/img27.png" alt="Catering">
+      </div>
+    </div>
+  </section>
+
+<!-- Subcategory Slider -->
+    <div class="subcategory-slider-wrapper">
+      <div class="subcategory-slider" id="subcategory-slider">
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img11.png" alt="All Cousins"></div>
+          <div class="subcategory-label">All Cousins</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img12.png" alt="Cookies"></div>
+          <div class="subcategory-label">Cookies</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img13.png" alt="Cheesecake"></div>
+          <div class="subcategory-label">Cheesecake</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img14.png" alt="Waffle"></div>
+          <div class="subcategory-label">Waffle</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img15.png" alt="Bakery"></div>
+          <div class="subcategory-label">Bakery</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img16.png" alt="Donut"></div>
+          <div class="subcategory-label">Donut</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img17.png" alt="Coffee"></div>
+          <div class="subcategory-label">Coffee</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img18.png" alt="Frozen Yoghurt"></div>
+          <div class="subcategory-label">Frozen Yoghurt</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img19.png" alt="Crepe"></div>
+          <div class="subcategory-label">Crepe</div>
+        </div>
+        <div class="subcategory-item">
+          <div class="subcategory-img"><img src="assets/img20.png" alt="Churros"></div>
+          <div class="subcategory-label">Churros</div>
+        </div>
+        <!-- Add more subcategory items if needed -->
+      </div>
+    </div>
+  </section>
+  <!-- TOP RESTAURANTS -->
+  <section class="section container">
+    <h2>Top Restaurants Near You</h2>
+    <div class="card-grid rest-grid">
+      
+<div class="rest-card">
+  <div class="thumb"><img src="assets/img-38.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Feeling Sugar</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <p class="meta">24-34 min • 1.4 km • KD 1.00</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card">
+  <div class="thumb"><img src="assets/img-39.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>The Bakery Blere</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <p class="meta">24-34 min • 1.4 km • KD 1.00</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card">
+  <div class="thumb"><img src="assets/img-40.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Feeling Sugar</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <p class="meta">24-34 min • 1.4 km • KD 1.00</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card">
+  <div class="thumb"><img src="assets/img-41.png"><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Ookie Cookie</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <p class="meta">24-34 min • 1.4 km • KD 1.00</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- DISCOUNT BANNERS -->
+  <section class="section">
+    <div class="container">
+      <div class="scroll-wrap banners">
+        <button class="scroll-btn prev" data-target="#banners">‹</button>
+        <div id="banners" class="banner-row">
+          
+<img class="banner" src="assets/img8.png" alt="">
+<img class="banner" src="assets/img9.png" alt="">
+<img class="banner" src="assets/img10.png" alt="">
+        </div>
+        <button class="scroll-btn next" data-target="#banners">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFLUENCERS -->
+  <section class="influencers">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Influencers</h2>
+        <div class="arrows">
+          <button class="scroll-btn prev" data-target="#infl">‹</button>
+          <button class="scroll-btn next" data-target="#infl">›</button>
+        </div>
+      </div>
+      <div id="infl" class="infl-row">
+        <div class="infl-card"><img src="assets/img3.png" alt=""><h5>Abeer Alatiyyah</h5></div>
+<div class="infl-card"><img src="assets/img4.png"><h5>Abeer Alatiyyah</h5></div>
+<div class="infl-card"><img src="assets/img5.png" alt=""><h5>Abeer Alatiyyah</h5></div>
+<div class="infl-card"><img src="assets/img6.png"><h5>Abeer Alatiyyah</h5></div>
+<div class="infl-card"><img src="assets/img7.png" alt=""><h5>Abeer Alatiyyah</h5></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PICKED FOR YOU -->
+  <section class="section container">
+    <div class="section-head compact">
+      <h2>Picked For You</h2>
+      <div class="arrows">
+        <button class="scroll-btn prev" data-target="#picked">‹</button>
+        <button class="scroll-btn next" data-target="#picked">›</button>
+      </div>
+    </div>
+    <div id="picked" class="card-row">
+      
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-38.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Feeling Sugar Bakery</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-39.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>The Bakery Blere</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-40.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Feeling Sugar</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-41.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Ookie Cookie</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  </section>
+
+  <!-- CHOCOLATE LOVERS -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head compact">
+        <h2>Chocolate Lovers</h2>
+        <div class="arrows">
+          <button class="scroll-btn prev" data-target="#choc">‹</button>
+          <button class="scroll-btn next" data-target="#choc">›</button>
+        </div>
+      </div>
+      <div id="choc" class="card-row">
+        
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-42.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>OYO</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-43.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Hive - Russian Honey Cake</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-44.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Ookie Cookie</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="rest-card sm">
+  <div class="thumb"><img src="assets/img-45.png" alt=""><span class="like">♡</span></div>
+  <div class="rest-body">
+    <h3>Feeling Sugar</h3>
+    <p class="cuisine">Chinese, Mongolian, Noodles, Soup</p>
+    <div class="foot">
+      <span class="badge">40% off on orders above KD 4.00</span>
+      <span class="rating">★ 4.5</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- APP PROMO + FOOTER -->
+  <section class="app-promo container">
+    <div class="promo-card">
+      <div class="promo-copy">
+        <h3>Mobile App</h3>
+        <p>Download the ZUWARA app on your mobile device for a more convenient and efficient ordering and delivery experience</p>
+        <div class="store-badges">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </div>
+      </div>
+      <img class="phones" src="assets/img23.png" alt="Phones">
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div class="foot-col">
+        <h4>POPULAR</h4>
+        <ul>
+          <li>Healthy</li><li>Milk Shake</li><li>Cheesecake</li><li>Frozen Yoghurt</li>
+          <li>Waffle</li><li>Coffee</li><li>Arabic Sweet</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li>Influencer</li><li>Offers</li><li>Newly Added</li><li>Delivery</li><li>Trends</li><li>Ya Hala</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>CUSTOMER ACCOUNT</h4>
+        <ul>
+          <li>Orders</li><li>Gifts</li><li>Invite Friends</li><li>Favourites</li><li>Addresses</li><li>My Loyalty</li><li>Zwara Credits</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>HELP & SUPPORT</h4>
+        <ul>
+          <li>About Us</li><li>FAQ’s</li><li>How to Order</li><li>Privacy Statement</li><li>Terms of Use</li><li>Data Deletion Policy</li><li>Feedback</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>CONTACT US</h4>
+        <ul>
+          <li>Whatsapp Us: +965 869878955</li>
+          <li>Call Us On: +965 869878955</li>
+          <li>Email: @zwara.com</li>
+          <li>8:00 AM to 8:00 PM, 365 days</li>
+        </ul>
+        <h4 class="mt">DOWNLOAD THE APP</h4>
+        <div class="store-badges">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom container">
+      <div class="foot-brand">Zwara © 2025. All Rights Reserved.</div>
+      <div class="social">FOLLOW US • ○ ○ ○ ○</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
